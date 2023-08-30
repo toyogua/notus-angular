@@ -1,20 +1,23 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "b914eacd-a906-481c-8aef-303b039720fd"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "notus-angular": {
+    "danika": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "danika",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [ "chart.js" ],
-            "outputPath": "dist/notus-angular",
+            "outputPath": "dist/danika",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "notus-angular:build"
+            "browserTarget": "danika:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "notus-angular:build:production"
+              "browserTarget": "danika:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "notus-angular:build"
+            "browserTarget": "danika:build"
           }
         },
         "test": {
@@ -114,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "notus-angular:serve"
+            "devServerTarget": "danika:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "notus-angular:serve:production"
+              "devServerTarget": "danika:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "notus-angular"
+  "defaultProject": "danika"
 }
